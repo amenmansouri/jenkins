@@ -12,6 +12,7 @@ pipeline {
         stage('Build') {
             steps {
                 sh 'mvn -B -DskipTests clean package'
+                stash includes: '**/target/*.jar', name: 'app'
             }
         }
         stage('Test') {
