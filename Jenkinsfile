@@ -1,11 +1,21 @@
-pipeline{
+pipeline {
     agent any
 
-    stages{
-        stage("build")
-        steps{
-            echo 'try to run declarative pipeline'
+    stages {
+        stage('Build') {
+            steps {
+                echo 'Building..'
+            }
+        }
+        stage('Test') {
+            steps {
+                echo 'Testing..'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deploying....'
+            }
         }
     }
-
 }
