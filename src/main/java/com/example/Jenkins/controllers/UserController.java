@@ -17,8 +17,8 @@ public class UserController {
     private UserService userService;
 
     @PostMapping
-    public User saveOrUpdate(@RequestBody User user){
-        return  userService.saveOrUpdate(user);
+    public void saveOrUpdate(@RequestBody User user){
+          userService.saveOrUpdate(user);
     }
     @GetMapping(value = "{id}")
     public User findOne(@PathVariable Long id){

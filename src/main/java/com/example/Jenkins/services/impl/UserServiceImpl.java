@@ -16,8 +16,8 @@ public class UserServiceImpl implements UserService {
     @Autowired
     private UserRepository userRepository;
     @Override
-    public User saveOrUpdate(User user) {
-        return userRepository.save(user);
+    public void saveOrUpdate(User user) {
+         userRepository.save(user);
     }
 
     @Override
