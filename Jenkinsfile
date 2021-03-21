@@ -4,7 +4,7 @@ pipeline{
     stages{
         stage("build")
         steps{
-            echo'here'
+            echo 'try to run declarative pipeline'
         }
     }
 
