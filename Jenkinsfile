@@ -12,7 +12,7 @@ pipeline {
                 }
             }
             steps {
-                sh 'mvn -B -DskipTests clean package'
+                sh 'mvn clean package'
                 stash includes: '**/target/*.jar', name: 'app'
             }
             post {
